@@ -1,4 +1,4 @@
-package com.vakya.paymentservice.controller;
+package com.vakya.paymentservice.controller.webhooks;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

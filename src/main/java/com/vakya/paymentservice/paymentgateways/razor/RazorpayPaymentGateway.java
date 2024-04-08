@@ -1,17 +1,20 @@
-package com.vakya.paymentservice.service;
+package com.vakya.paymentservice.paymentgateways.razor;
 
+import com.razorpay.RazorpayException;
+import com.stripe.exception.StripeException;
+import com.vakya.paymentservice.paymentgateways.PaymentGateway;
 import com.razorpay.PaymentLink;
 import com.razorpay.RazorpayClient;
-import com.razorpay.RazorpayException;
-import com.vakya.paymentservice.dto.PaymentResponse;
 import org.json.JSONObject;
-import org.springframework.stereotype.Service;
 
-@Service("razorpay")
-public class RazorpayPaymentServiceImpl implements  PaymentService{
+public class RazorpayPaymentGateway implements PaymentGateway {
+    @Override
+    public String generatePaymentLink(Long amount) throws StripeException {
+        return null;
+    }
     private RazorpayClient razopayClient;
 
-    public  RazorpayPaymentServiceImpl(RazorpayClient razorpayClient){
+    public  RazorpayPaymentGateway(RazorpayClient razorpayClient){
         this.razopayClient = razorpayClient;
     }
     @Override
